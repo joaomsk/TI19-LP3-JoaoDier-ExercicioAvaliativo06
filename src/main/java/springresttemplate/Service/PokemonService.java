@@ -1,5 +1,6 @@
 package springresttemplate.Service;
 
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.stereotype.Service;
@@ -38,7 +39,7 @@ public class PokemonService implements IPokemonService {
 
         return PokemonDTO.builder()
                 .id(response.getId())
-                .name(response.getName())
+                .name(StringUtils.capitalize(response.getName()))
                 .weight(response.getWeight())
                 .heigth(response.getHeight())
                 .sprites(response.getSprites().getFront_default())
