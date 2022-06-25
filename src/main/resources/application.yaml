@@ -1,0 +1,7 @@
+server:
+  port: 8085
+  servlet:
+    context-path: '/api/poke/v1'
+
+poke-api-uri: 'https://pokeapi.co/api/v2/pokemon'
+
